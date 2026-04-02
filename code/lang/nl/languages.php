@@ -1,0 +1,26 @@
+<?php
+
+return [
+    'manager' => "Beheer Talen",
+    'no_languages' => 'Geen talen beschikbaar.',
+    'search' => 'Zoek op basis van taalnaam of taalcode',
+    'Code' => 'Code',
+    'Status' => 'Status',
+    'confirm_enable' => 'Weet u zeker dat u deze taal wilt inschakelen?',
+    'confirm_disable' => 'Weet u zeker dat u deze taal wilt uitschakelen?',
+    'language_updated' => 'Taal bijgewerkt',
+    'add_language' => 'Taal toevoegen',
+    'add_language_description' => 'Voeg een nieuwe taal toe aan het systeem door deze uit de lijst te kiezen.',
+    'select_language' => 'Selecteer taal',
+    'enabled' => 'Ingeschakeld',
+    'invalid_language' => 'Geselecteerde taal is ongeldig.',
+    'already_exists' => 'Deze taal bestaat al in het systeem.',
+    'language_created' => 'Taal succesvol toegevoegd.',
+    'search' => 'Zoek talen',
+    'no_languages' => 'Geen talen gevonden.',
+    'confirm_remove' => 'Weet u zeker dat u deze taal wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.',
+    'language_removed' => 'Taal succesvol verwijderd.',
+    'disable_before_remove' => 'Schakel de taal uit voordat u deze verwijdert.',
+    'cannot_remove_default' => 'De standaardtalen (Engels en Nederlands) kunnen niet worden verwijderd.',
+    'cannot_toggle_default' => 'De standaardtalen (Engels en Nederlands) kunnen niet worden in- of uitgeschakeld.',
+];

@@ -1,0 +1,40 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'clientsManager' => 'Manage Clients',
+    'SearchClients' => 'Search clients',
+    'SearchClientBy' =>'Search all clients by name or username',
+    'SearchClientByAndActive' =>'Search active clients by name or username',
+    'addClient' =>'Add client',
+    'HideInactive' => 'Hide inactive clients',
+    'ShowInactive' =>'Show inactive clients',
+    'NoInactiveFound' => 'No inactive clients found.',
+    'NoClientsFound' => 'No clients found yet.',
+    'CreateClient' => 'Create client',
+    'EditClient' => 'Edit client',
+    'UpdateClient' => 'Update client',
+    'AddClient' => 'Add client',
+    'ClientCanSignIn' => 'Client can sign in',
+    'DeleteClient' => 'Delete client permanently',
+    'EnableClient' => 'Enable client',
+    'DisableClient' => 'Disable client',
+    'ConfirmEnableClient' => 'Are you sure you want to enable :client? They will regain access immediately.',
+    'ConfirmDisableClient' => 'Are you sure you want to disable :client? They will lose access until re-enabled.',
+    'Cancel' => 'Cancel',
+    'SaveChanges' => 'Save changes',
+    'assignTest' => 'Assign test',
+    'viewResults' => 'View results',
+    'noMentorAssigned' => 'No mentor assigned',
+    'selectMentor' => 'Select a mentor',
+    'deleteClient' => 'Delete client',
+    'ConfirmDeleteClient' => 'Are you sure you want to delete :client? This will permanently delete all data, including any data used for research. Use this only if you were specifically asked to delete all data for :client. This action cannot be undone.',
+    'assignTestsToClient' => 'Assign Tests to Client',
+    'selectTestsForClient' => 'Select the tests you want to assign to <strong>:client</strong>.',
+    'selectClientFirst' => 'Select a client to assign tests.',
+    'assign' => 'Assign',
+    'testsAssignedSuccess' => 'Tests assigned successfully!',
+    'informationInactive' => 'You can find inactive users by clicking on the button provided below the table. Then you get a table with inactive users.',
+    'titleInfomationInactive' => 'Where can you find inactive users?'
+];

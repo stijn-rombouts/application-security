@@ -1,0 +1,40 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'clientsManager' => 'Beheer Cliënten',
+    'SearchClients' => 'Zoek cliënten',
+    'SearchClientBy' => 'Zoek alle cliënten op naam of gebruikersnaam',
+    'SearchClientByAndActive' => 'Zoek actieve cliënten op naam of gebruikersnaam',
+    'addClient' => 'Cliënt toevoegen',
+    'HideInactive' => 'Verberg inactieve cliënten',
+    'ShowInactive' => 'Toon inactieve cliënten',
+    'NoInactiveFound' => 'Geen inactieve cliënten gevonden.',
+    'NoClientsFound' => 'Nog geen cliënten gevonden.',
+    'CreateClient' => 'Cliënt aanmaken',
+    'EditClient' => 'Cliënt bewerken',
+    'UpdateClient' => 'Cliënt bijwerken',
+    'AddClient' => 'Cliënt toevoegen',
+    'ClientCanSignIn' => 'Cliënt kan inloggen',
+    'DeleteClient' => 'Cliënt permanent verwijderen',
+    'EnableClient' => 'Cliënt inschakelen',
+    'DisableClient' => 'Cliënt uitschakelen',
+    'ConfirmEnableClient' => 'Weet je zeker dat je :client wilt inschakelen? Ze krijgen onmiddellijk weer toegang.',
+    'ConfirmDisableClient' => 'Weet je zeker dat je :client wilt uitschakelen? Ze verliezen toegang totdat ze opnieuw worden ingeschakeld.',
+    'Cancel' => 'Annuleren',
+    'SaveChanges' => 'Wijzigingen opslaan',
+    'assignTest' => 'Test toewijzen',
+    'viewResults' => 'Resultaten bekijken',
+    'noMentorAssigned' => 'Geen mentor toegewezen',
+    'selectMentor' => 'Selecteer een mentor',
+    'deleteClient' => 'Cliënt verwijderen',
+    'ConfirmDeleteClient' => 'Weet je zeker dat je :client wilt verwijderen? Hierbij worden alle gegevens verwijderd, ook bruikbare gegevens die gebruikt worden voor onderzoeken. Gebruik dit enkel als je er expliciet gevraagd wordt om alle gegevens van :client te verwijderen. Deze actie kan niet ongedaan worden gemaakt.',
+    'assignTestsToClient' => 'Tests toewijzen aan cliënt',
+    'selectTestsForClient' => 'Selecteer de tests die je wilt toewijzen aan <strong>:client</strong>.',
+    'selectClientFirst' => 'Selecteer eerst een cliënt om tests toe te wijzen.',
+    'assign' => 'Toewijzen',
+    'testsAssignedSuccess' => 'Tests succesvol toegewezen!',
+    'informationInactive' => 'U kunt de inactieve personen terugvinden door onder de tabel op de voorziene knop te klikken. Dan krijgt u een tabel met de inactieve personen.',
+    'titleInfomationInactive' => 'Waar kunt u inactieve personen terugvinden?'
+];

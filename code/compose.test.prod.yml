@@ -1,0 +1,87 @@
+services:
+  app:
+    container_name: app
+    image: mpi-employment-interest-tool:latest
+    restart: unless-stopped
+    ports:
+      - 9000:9000
+    depends_on:
+      - db
+    env_file:
+      - .env.test.prod
+    environment:
+      DB_CONNECTION: ${DB_CONNECTION}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_DATABASE: ${DB_DATABASE}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - storage:/usr/share/nginx/html/storage:rw
+      - build-assets:/usr/share/nginx/html/public:rw
+  nginx:
+    container_name: nginx
+    image: custom-nginx:latest
+    ports:
+      - 80:80
+    depends_on:
+      - app
+    restart: unless-stopped
+    volumes:
+      # - /etc/laravel/ssl:/etc/nginx/ssl:ro # SSL certs generated beforehand
+      - storage:/usr/share/nginx/html/storage:rw
+      - build-assets:/usr/share/nginx/html/public:ro
+  db:
+    container_name: db
+    image: mariadb:11
+    ports:
+      - 3306:3306
+    restart: unless-stopped
+    env_file:
+      - .env.test.prod
+    volumes:
+      - db-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_DATABASE: '${DB_DATABASE}'
+      MYSQL_USER: '${DB_USERNAME}'
+      MYSQL_PASSWORD: '${DB_PASSWORD}'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    healthcheck:
+      test:
+          - CMD
+          - healthcheck.sh
+          - '--connect'
+          - '--innodb_initialized'
+      retries: 3
+      timeout: 5s
+  redis:
+    container_name: redis
+    image: redis:7.2-alpine
+    platform: linux/amd64
+    ports:
+      - 6379:6379
+    env_file:
+      - .env.test.prod
+    restart: always
+    volumes:
+      - redis-data:/data
+    command:
+      - redis-server
+      - --requirepass
+      - "${REDIS_PASSWORD}"
+      - --rename-command
+      - FLUSHDB
+      - ""
+      - --rename-command
+      - FLUSHALL
+      - ""
+    environment:
+      - TZ=UTC
+
+volumes:
+  storage:
+  db-data:
+  redis-data:
+  build-assets:
