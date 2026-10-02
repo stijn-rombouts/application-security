@@ -51,11 +51,11 @@ The following vulnerabilities were identified and verified as True Positives.
 | :--- | :--- | :--- | :--- | :--- |
 | **SCA-01** | [`lodash`: Code Injection (CVE-2026-4800)](https://nvd.nist.gov/vuln/detail/CVE-2026-4800) | **Critical** | True Positive | Critical impact on frontend/backend template processing; vulnerable version 4.17.23 is used (CVSS 9.8). |
 | **SCA-02** | [`symfony/http-foundation`: Auth Bypass (CVE-2025-64500)](https://nvd.nist.gov/vuln/detail/CVE-2025-64500) | **High** | True Positive | PATH_INFO parsing error can lead to prefix-based authorization bypass (CVSS 7.3). |
-| **IAC-01** | [Running as Root (Privilege Escalation)](https://cwe.mitre.org/data/definitions/250.html) | **High** | True Positive | Missing `USER` command in both Dockerfiles (CWE-250). High escape risk. |
+| **IAC-01** | Running as Root (Privilege Escalation)| **High** | True Positive | Missing `USER` command in both Dockerfiles (CWE-250). High escape risk. |
 | **SCA-03** | `league/commonmark`: XSS / SSRF | **Medium** | True Positive | Vulnerable version if rendering untrusted markdown. |
 | **SCA-04** | `psy/psysh`: Local Privilege Escalation | **Medium** | Context-Dep | Only exploitable if attacker can write to the CWD. |
 | **IAC-02** | Missing `--no-install-recommends` | **Medium** | True Positive | Increases attack surface and image size. |
-| **AUTH-01** | [Insufficient Rate Limiting (IP-based)](https://cwe.mitre.org/data/definitions/307.html) | **High** | True Positive | Rate limiting is only applied per-username (CWE-307). Endpoint is vulnerable to password spraying. |
+| **AUTH-01** | Insufficient Rate Limiting (IP-based) | **High** | True Positive | Rate limiting is only applied per-username (CWE-307). Endpoint is vulnerable to password spraying. |
 | **IAC-03** | Missing `HEALTHCHECK` | **Low** | True Positive | Affects availability and monitoring. |
 
 ---
